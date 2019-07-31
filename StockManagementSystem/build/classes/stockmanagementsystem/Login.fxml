@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="488.0" maxWidth="650.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="650.0" style="-fx-background-color: #303441;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmanagementsystem.LoginController">
+   <children>
+      <ImageView fitHeight="444.0" fitWidth="433.0" layoutX="217.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="217.0" opacity="0.5" prefHeight="444.0" prefWidth="433.0" style="-fx-background-color: #152636;" />
+      <Pane layoutX="323.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="444.0" prefWidth="326.0">
+         <children>
+            <TextField fx:id="txtEPFNumber" layoutY="177.0" onMouseClicked="#enterEpf" prefHeight="25.0" prefWidth="212.0" promptText="Enter EPF Number">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="txtPassword" layoutY="231.0" onMouseClicked="#enterPassword" prefHeight="25.0" prefWidth="212.0" promptText="Enter Password">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnEnter" layoutY="300.0" mnemonicParsing="false" onAction="#enterMainMenu" prefHeight="29.0" prefWidth="105.0" styleClass="buttonLogin" stylesheets="@styles/stylesheet.css" text="Enter" textFill="#f2eeee">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExit" layoutX="107.0" layoutY="300.0" mnemonicParsing="false" onAction="#exitFromLoginMenu" prefHeight="29.0" prefWidth="105.0" styleClass="buttonExit" stylesheets="@styles/stylesheet.css" text="Exit" textFill="#f2eeee">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="78.0" fitWidth="80.0" layoutX="13.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Studentlogin.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="99.0" layoutY="96.0" text="Log In" textFill="#ebecee">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblError" layoutX="2.0" layoutY="362.0" textFill="#bc0202">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fitHeight="109.0" fitWidth="219.0" layoutY="109.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/Elegance-of-stylish-bike-HD-wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="219.0" layoutX="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/2018_ktm_790_duke_hd_4k.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="109.0" fitWidth="219.0" layoutY="218.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/Best_Aprilia_Yellow_Bike_HD_Photo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="117.0" fitWidth="219.0" layoutY="327.0" pickOnBounds="true">
+         <image>
+            <Image url="@images/metalic-green-kawasaki-desktop-background.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

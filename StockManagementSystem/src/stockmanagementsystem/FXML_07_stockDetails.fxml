@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="795.0" stylesheets="@styles/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmanagementsystem.FXML_07_stockDetailsController">
+   <children>
+      <TabPane layoutY="14.0" prefHeight="616.0" prefWidth="795.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Order Stock">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="768.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="22.0" prefHeight="21.0" prefWidth="262.0" style="-fx-background-color: #2b16a4;" text="Add New Item to Order List" textFill="#f2f2f4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="60.0" text="Brand :" />
+                        <Label layoutX="25.0" layoutY="94.0" text="Model :" />
+                        <Label layoutX="25.0" layoutY="128.0" text="Color :" />
+                        <ComboBox fx:id="cboBrand" layoutX="88.0" layoutY="56.0" onAction="#select_Brand" prefHeight="25.0" prefWidth="199.0" visibleRowCount="2" />
+                        <ComboBox fx:id="cboModel" disable="true" layoutX="88.0" layoutY="90.0" onAction="#select_Model" prefHeight="25.0" prefWidth="199.0" visibleRowCount="4" />
+                        <ComboBox fx:id="cboColor" disable="true" layoutX="88.0" layoutY="124.0" onAction="#select_color" prefHeight="25.0" prefWidth="199.0" visibleRowCount="4" />
+                        <TextField fx:id="txtColor" disable="true" layoutX="138.0" layoutY="160.0" />
+                        <CheckBox fx:id="chkColor" layoutX="43.0" layoutY="164.0" mnemonicParsing="false" onMousePressed="#checkColor" text="If new Color :" />
+                        <Label layoutX="25.0" layoutY="200.0" text="Qty :" />
+                        <ComboBox fx:id="cboQty" disable="true" layoutX="89.0" layoutY="196.0" onAction="#select_Qty" prefHeight="25.0" prefWidth="199.0" visibleRowCount="5" />
+                        <Label alignment="CENTER" layoutX="325.0" layoutY="22.0" prefHeight="21.0" prefWidth="446.0" style="-fx-background-color: #2b16a4;" text="Pending to Order" textFill="#f2f2f4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="orderTable" layoutX="325.0" layoutY="60.0" prefHeight="266.0" prefWidth="447.0">
+                          <columns>
+                            <TableColumn fx:id="clnBrand" prefWidth="85.0" text="Brand" />
+                            <TableColumn fx:id="clnModel" prefWidth="152.0" text="Model" />
+                              <TableColumn fx:id="clnColor" prefWidth="83.0" text="Color" />
+                              <TableColumn fx:id="clnQty" prefWidth="38.0" text="Qty" />
+                              <TableColumn fx:id="clnStatus" prefWidth="88.0" text="Status" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="btnAddToOderList" disable="true" layoutX="25.0" layoutY="297.0" mnemonicParsing="false" onAction="#addItems_to_orderList" prefHeight="16.0" prefWidth="262.0" style="-fx-background-color: #800080;" styleClass="formButton" stylesheets="@styles/stylesheet.css" text="Add to Order List" textFill="#fcf8f8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Separator layoutX="304.0" layoutY="15.0" orientation="VERTICAL" prefHeight="552.0" prefWidth="0.0" />
+                        <Button fx:id="btnOrderNow" layoutX="325.0" layoutY="359.0" mnemonicParsing="false" onAction="#order_stock" prefHeight="35.0" prefWidth="155.0" style="-fx-background-color: #009CDF;" styleClass="formButton" text="Order Now" textFill="#eeeaea">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnDeleteItem" layoutX="508.0" layoutY="359.0" mnemonicParsing="false" onAction="#delete_selected_item" prefHeight="35.0" prefWidth="156.0" style="-fx-background-color: #DC143C;" styleClass="formButton" text="Delete Selected Item" textFill="#eeebeb">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnPrintStock" layoutX="325.0" layoutY="411.0" mnemonicParsing="false" onAction="#print_pending_stock" prefHeight="36.0" prefWidth="183.0" style="-fx-background-color: #0CB754;" styleClass="formButton" text="Print Pending Stock" textFill="#f5f3f3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Add Ordered Product">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="240.0" layoutY="77.0" prefHeight="21.0" prefWidth="316.0" style="-fx-background-color: #2b16a4;" text="Add Ordered Product To Stock" textFill="#f2f2f4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="240.0" layoutY="141.0" text="Brand :" />
+                        <Label layoutX="239.0" layoutY="178.0" text="Model :" />
+                        <Label layoutX="239.0" layoutY="217.0" text="Color :" />
+                        <ComboBox fx:id="cboOrderBrand" layoutX="338.0" layoutY="137.0" onAction="#select_Order_Brand" prefHeight="25.0" prefWidth="219.0" visibleRowCount="2" />
+                        <ComboBox fx:id="cboOrderModel" disable="true" layoutX="338.0" layoutY="174.0" onAction="#select_Order_Model" prefHeight="25.0" prefWidth="219.0" visibleRowCount="4" />
+                        <ComboBox fx:id="cboOrderColor" disable="true" layoutX="337.0" layoutY="213.0" onAction="#select_Order_Color" prefHeight="25.0" prefWidth="220.0" visibleRowCount="4" />
+                        <Button fx:id="btnInsertOrderItem" disable="true" layoutX="238.0" layoutY="382.0" mnemonicParsing="false" onAction="#addOrderItem" prefHeight="29.0" prefWidth="319.0" styleClass="formButton" stylesheets="@styles/stylesheet.css" text="Add Ordered Product" textFill="#fcf8f8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="239.0" layoutY="257.0" text="Value: " />
+                        <Label layoutX="239.0" layoutY="298.0" text="Chassic No. :" />
+                        <Label layoutX="239.0" layoutY="338.0" text="Engine No. :" />
+                        <TextField fx:id="txtOrderValue" disable="true" layoutX="338.0" layoutY="253.0" prefHeight="25.0" prefWidth="219.0" />
+                        <TextField fx:id="txtOrderChassicNumber" disable="true" layoutX="338.0" layoutY="294.0" prefHeight="25.0" prefWidth="220.0" />
+                        <TextField fx:id="txtOrderEngineNumber" disable="true" layoutX="338.0" layoutY="334.0" prefHeight="25.0" prefWidth="221.0" />
+                        <Label fx:id="lblPendingAmount" layoutX="568.0" layoutY="217.0" textFill="#cd1515" />
+                        <Label fx:id="lblErrorFill" layoutX="238.0" layoutY="411.0" text="* fill all the fields" textFill="#cd1515" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Add New Product">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="240.0" layoutY="77.0" prefHeight="21.0" prefWidth="316.0" style="-fx-background-color: #2b16a4;" text="Add New Items To Stock" textFill="#f2f2f4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="240.0" layoutY="141.0" text="Brand :" />
+                        <Label layoutX="239.0" layoutY="178.0" text="Model :" />
+                        <Label layoutX="239.0" layoutY="217.0" text="Color :" />
+                        <ComboBox fx:id="cboNewBrand" layoutX="338.0" layoutY="137.0" onAction="#select_New_Brand" prefHeight="25.0" prefWidth="219.0" visibleRowCount="2" />
+                        <ComboBox fx:id="cboNewModel" layoutX="338.0" layoutY="174.0" onAction="#select_New_Model" prefHeight="25.0" prefWidth="219.0" visibleRowCount="4" />
+                        <ComboBox fx:id="cboNewColor" layoutX="337.0" layoutY="213.0" prefHeight="25.0" prefWidth="220.0" visibleRowCount="4" />
+                        <Button fx:id="btnInsertNewItem" disable="true" layoutX="238.0" layoutY="382.0" mnemonicParsing="false" onAction="#addNewItem" prefHeight="29.0" prefWidth="319.0" styleClass="formButton" stylesheets="@styles/stylesheet.css" text="Add New Product" textFill="#fcf8f8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Label layoutX="239.0" layoutY="257.0" text="Value: " />
+                        <Label layoutX="239.0" layoutY="298.0" text="Chassic No. :" />
+                        <Label layoutX="239.0" layoutY="338.0" text="Engine No. :" />
+                        <TextField fx:id="txtNewValue" disable="true" layoutX="338.0" layoutY="253.0" prefHeight="25.0" prefWidth="219.0" />
+                        <TextField fx:id="txtNewChassicNumber" disable="true" layoutX="338.0" layoutY="294.0" prefHeight="25.0" prefWidth="220.0" />
+                        <TextField fx:id="txtNewEngineNumber" disable="true" layoutX="338.0" layoutY="334.0" prefHeight="25.0" prefWidth="221.0" />
+                        <TextField fx:id="txtNewColor" layoutX="566.0" layoutY="213.0" promptText="New Color" />
+                        <TextField fx:id="txtNewModel" layoutX="566.0" layoutY="174.0" promptText="New Model" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

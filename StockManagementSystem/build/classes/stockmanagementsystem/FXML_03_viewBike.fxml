@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="795.0" style="-fx-background-color: #455469;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stockmanagementsystem.FXML_03_viewBikeController">
+   <children>
+      <Pane prefHeight="250.0" prefWidth="451.0" style="-fx-background-color: #455469;">
+         <children>
+            <ImageView fitHeight="135.0" fitWidth="140.0" layoutX="31.0" layoutY="20.0" opacity="0.49" pickOnBounds="true">
+               <image>
+                  <Image url="@images/kisspng-computer-icons-search-box-web-search-engine-symbol-5b28da07c31ee8.6342673515294039117992.png" />
+               </image>
+            </ImageView>
+            <ComboBox fx:id="cmbBikeBrand" layoutX="193.0" layoutY="20.0" onAction="#select_bikeBrand" prefHeight="38.0" prefWidth="225.0" promptText="Select Bike Brand" style="-fx-background-color: #FFFFFF;" visibleRowCount="4" />
+            <ComboBox fx:id="cmbBikeModel" layoutX="193.0" layoutY="68.0" onAction="#select_bikeModel" prefHeight="38.0" prefWidth="225.0" promptText="Select Bike Model" style="-fx-background-color: #FFFFFF;" visibleRowCount="4" />
+            <ComboBox fx:id="cmbBikeColor" layoutX="193.0" layoutY="116.0" onAction="#select_bikeColor" prefHeight="38.0" prefWidth="225.0" promptText="Select Color" style="-fx-background-color: #FFFFFF;" visibleRowCount="4" />
+            <Button fx:id="btnSearch" disable="true" layoutX="313.0" layoutY="164.0" mnemonicParsing="false" onAction="#search_bike" prefHeight="31.0" prefWidth="105.0" styleClass="formButton" stylesheets="@styles/stylesheet.css" text="Search" textFill="WHITE" />
+         </children>
+      </Pane>
+      <TableView fx:id="bikeTable" layoutX="48.0" layoutY="276.0" onMouseClicked="#select_chassisNumber" prefHeight="331.0" prefWidth="699.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="clnBrand" prefWidth="145.0" text="Brand" />
+          <TableColumn fx:id="clnModel" prefWidth="204.0" text="Model" />
+            <TableColumn fx:id="clnValue" prefWidth="135.0" text="Price" />
+            <TableColumn fx:id="clnChassicNumber" prefWidth="200.0" text="Chassic Number" />
+        </columns>
+      </TableView>
+      <Separator layoutY="248.0" prefHeight="2.0" prefWidth="795.0" />
+      <Separator layoutX="450.0" orientation="VERTICAL" prefHeight="250.0" prefWidth="0.0" />
+      <Pane layoutX="451.0" layoutY="-1.0" prefHeight="250.0" prefWidth="344.0" style="-fx-background-color: #FFFFFF;" />
+      <ImageView fx:id="image1" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image2" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/2.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image3" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/3.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image4" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image5" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/5.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image6" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/6.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image7" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/7.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image8" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/8.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image9" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/9.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image10" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/10.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image11" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/11.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image12" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/12.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image13" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/13.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image14" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/14.jpg" />
+         </image></ImageView>
+      <ImageView fx:id="image15" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/15.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image16" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/16.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image17" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/17.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image18" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/18.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image19" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/19.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image20" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/20.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image21" fitHeight="189.0" fitWidth="261.0" layoutX="471.0" layoutY="42.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@bikeImages/21.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

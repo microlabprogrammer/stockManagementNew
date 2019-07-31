@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="StockManagementSystem.jnlp">
+  <information>
+    <title>StockManagementSystem</title>
+    <vendor>DEWSRI DE MEL</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="StockManagementSystem.jar" size="15546188" download="eager" />
+    <jar href="lib\commons-beanutils-1.8.2.jar" size="231891" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="52592" download="eager" />
+    <jar href="lib\curvesapi-1.05.jar" size="111927" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\iText-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="lib\jasperreports-4.1.1.jar" size="3276245" download="eager" />
+    <jar href="lib\jasperreports-5.1.0.jar" size="4412857" download="eager" />
+    <jar href="lib\jcommon-1.0.16.jar" size="488686" download="eager" />
+    <jar href="lib\jdom-1.1.jar" size="153115" download="eager" />
+    <jar href="lib\jdt-compiler-3.1.1.jar" size="1212369" download="eager" />
+    <jar href="lib\jfoenix-8.0.4.jar" size="2487326" download="eager" />
+    <jar href="lib\jfreechart-1.0.13.jar" size="1425742" download="eager" />
+    <jar href="lib\jxl-2.6.10.jar" size="743361" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\poi-3.6.jar" size="1539291" download="eager" />
+    <jar href="lib\poi-4.0.0.jar" size="2715721" download="eager" />
+    <jar href="lib\poi-ooxml-4.0.0.jar" size="1758061" download="eager" />
+    <jar href="lib\poi-ooxml-schemas-4.0.0.jar" size="6477408" download="eager" />
+    <jar href="lib\xmlbeans-3.0.1.jar" size="2582300" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="StockManagementSystem" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="stockmanagementsystem.StockManagementSystem"  name="StockManagementSystem" />
+  <update check="always"/>
+</jnlp>
